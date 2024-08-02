@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useState,useEffect } from "react"
 import { firestore } from '../firebase'; // Correctly import firestore
 
-import { collection, getDocs,query } from 'firebase/firestore' // Firestore functions
+import { collection, deleteDoc, doc, getDocs,query, setDoc } from 'firebase/firestore' // Firestore functions
 
 import { Box, Typography } from "@mui/material";
 
@@ -22,6 +22,21 @@ export default function Home() {
     setInventory(inventoryList)
     console.log(inventoryList)
   }
+   
+  const removeItem=async(item) =>{
+    const docRef=doc(collection(firestore,'inventory'),item)
+    const docSnap=await getDoc(docRef)
+
+  if (docSnap.exists()){
+    const {quantity}=docSnap.data()
+    if (quantity==1){
+      await deleteDoc(docRef)
+    }
+    else{
+      await setDoc(docRef,{quantity:quantity-1})
+    }
+  }
+  await updateInventory()
   
   useEffect(() => {
     updateInventory()
