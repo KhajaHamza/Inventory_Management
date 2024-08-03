@@ -33,7 +33,7 @@ const theme = createTheme({
     },
   },
 });
-
+// Function to fetch recipe suggestions based on inventory items
 const getRecipeSuggestions = async (inventory) => {
   try {
     const ingredients = inventory.map(item => item.name).join(", ");
@@ -68,7 +68,7 @@ export default function Home() {
   const [itemQuantity, setItemQuantity] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [recipes, setRecipes] = useState('');
-
+ // Fetches and updates the inventory from Firebase
   const updateInventory = async () => {
     const snapshot = query(collection(firestore, 'inventory'));
     const docs = await getDocs(snapshot);
@@ -79,6 +79,7 @@ export default function Home() {
     setInventory(inventoryList);
     console.log(inventoryList);
   };
+  // Adds a new item to the inventory or updates the quantity if it already exists
 
   const addItem = async (item, quantity) => {
     const docRef = doc(collection(firestore, 'inventory'), item);
@@ -93,6 +94,7 @@ export default function Home() {
     await updateInventory();
   };
 
+  // Removes an item from the inventory or decrements its quantity
   const removeItem = async (item) => {
     const docRef = doc(collection(firestore, 'inventory'), item);
     const docSnap = await getDoc(docRef);
@@ -107,6 +109,7 @@ export default function Home() {
     }
     await updateInventory();
   };
+  // Fetches recipe suggestions based on the current inventory
 
   const fetchRecipes = async () => {
     try {
