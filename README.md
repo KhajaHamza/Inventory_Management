@@ -41,12 +41,12 @@ Follow these steps to set up and run the project locally:
 2. **Install Dependencies**
 npm install
 
-3.**Set Up Firebase**
+3. **Set Up Firebase**
 Go to Firebase Console.
 Create a new project if you don't have one.
 Add a new web app to your project.
 
-4.**Set Up OpenAI API Key**
+4. **Set Up OpenAI API Key**
 
 Obtain an API key from OpenAI.
 
@@ -55,7 +55,7 @@ Add the API key to your .env.local file:
 OPENAI_API_KEY=your_openai_api_key
 
 
-5.**Run the Development Server**
+5. **Run the Development Server**
 
 npm run dev
 
