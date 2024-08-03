@@ -37,33 +37,29 @@ Follow these steps to set up and run the project locally:
    ```
    git clone https://github.com/KhajaHamza/Inventory_Management.git
    cd Inventory-Management
-Install Dependencies
-
+2. **Install Dependencies**
 npm install
-Set Up Firebase
+3.**Set Up Firebase**
 Go to Firebase Console.
 Create a new project if you don't have one.
 Add a new web app to your project.
-Copy the Firebase configuration and add it to a .env.local file in the root directory of the project.
-Set Up OpenAI API Key
+
+4.**Set Up OpenAI API Key**
 Obtain an API key from OpenAI.
 Add the API key to your .env.local file:
-plaintext
-Copy code
+
 OPENAI_API_KEY=your_openai_api_key
-Run the Development Server
-bash
-Copy code
+5.**Run the Development Server**
 npm run dev
 Open http://localhost:3000 in your browser to see the application.
-Project Structure
+**Project Structure**
 
 /pages: Contains the main pages of the application.
 /components: Contains reusable React components.
 /firebase: Contains Firebase configuration and initialization.
 /utils: Contains utility functions, such as API requests.
 /public: Contains static assets like images and fonts.
-How It Works
+**How It Works**
 
 Inventory Management: Users can add items to the inventory, specify their quantities, and remove items as needed. The inventory data is stored in Firebase and updated in real-time.
 Search Functionality: Users can search for specific items in the inventory using a search bar.
