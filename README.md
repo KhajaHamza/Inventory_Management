@@ -64,12 +64,20 @@ Open http://localhost:3000 in your browser to see the application.
 **Project Structure**
 
 /pages: Contains the main pages of the application.
+
 /components: Contains reusable React components.
+
 /firebase: Contains Firebase configuration and initialization.
+
 /utils: Contains utility functions, such as API requests.
+
 /public: Contains static assets like images and fonts.
+
+
 **How It Works**
 
 Inventory Management: Users can add items to the inventory, specify their quantities, and remove items as needed. The inventory data is stored in Firebase and updated in real-time.
+
 Search Functionality: Users can search for specific items in the inventory using a search bar.
+
 Recipe Suggestions: Users can get recipe suggestions based on the items in their inventory. This is done using the OpenAI API, which generates recipe ideas based on the list of ingredients.
