@@ -47,13 +47,20 @@ Create a new project if you don't have one.
 Add a new web app to your project.
 
 4.**Set Up OpenAI API Key**
+
 Obtain an API key from OpenAI.
+
 Add the API key to your .env.local file:
 
 OPENAI_API_KEY=your_openai_api_key
+
+
 5.**Run the Development Server**
+
 npm run dev
+
 Open http://localhost:3000 in your browser to see the application.
+
 **Project Structure**
 
 /pages: Contains the main pages of the application.
