@@ -39,6 +39,7 @@ Follow these steps to set up and run the project locally:
    cd Inventory-Management
    
 2. **Install Dependencies**
+
 npm install
 
 3. **Set Up Firebase**
